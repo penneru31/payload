@@ -1,0 +1,193 @@
+/* ================== Base Navigation Styles ================== */
+.navbar {
+  width: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner container for alignment */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.navbar-menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Navigation Buttons */
+.navbar-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* ================== Responsive Adjustments ================== */
+@media (max-width: 768px) {
+  .navbar-inner {
+    flex-wrap: wrap;
+  }
+
+  .navbar-menu-toggle {
+    display: block;
+  }
+
+  .navbar-links,
+  .navbar-buttons {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .navbar-links.open,
+  .navbar-buttons.open {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-logo img {
+    width: 100px;
+  }
+}
+
+/* ================== Theme Variations ================== */
+
+/* ---- Black Theme ---- */
+.navbar-black {
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar-black a {
+  color: #fff;
+}
+
+.navbar-black .btn-primary {
+  background-color: #222;
+}
+
+.navbar-black .btn-primary:hover {
+  background-color: #444;
+}
+
+/* ---- White Theme ---- */
+.navbar-white {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar-white a {
+  color: #000;
+}
+
+/* ---- Orange Theme ---- */
+.navbar-orange {
+  background-color: #fff3e0;
+  color: #bf360c;
+}
+
+.navbar-orange a {
+  color: #bf360c;
+}
+
+.navbar-orange .btn-primary {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.navbar-orange .btn-primary:hover {
+  background-color: #f57c00;
+}
+
+/* ---- Green Theme (Updated) ---- */
+.navbar-green {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.navbar-green a {
+  color: #2e7d32;
+}
+
+.navbar-green .btn-primary {
+  background-color: #43a047;
+  color: #fff;
+}
+
+.navbar-green .btn-primary:hover {
+  background-color: #388e3c;
+}
+
+.navbar-green .btn-secondary {
+  background-color: #81c784;
+  color: #fff;
+}
+
+.navbar-green .btn-secondary:hover {
+  background-color: #66bb6a;
+}
+
+/* ================== Prevent Overlaps ================== */
+body {
+  padding-top: 60px;
+}

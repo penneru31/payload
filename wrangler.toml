@@ -1,0 +1,13 @@
+name = "my-payload-cloudflare-app"
+main = ".open-next/worker.js"
+Using compatibility_date = 2025-10-16
+
+account_id = "194cc13915adf052024b673f23059f1d"
+[[d1_databases]]
+binding = "my_payload_db"  # The variable your Worker will use
+database_name = "my-payload-db"
+database_id = "5779f8ee-8147-4e7b-ba9a-089d4babca15"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "payload-media"
