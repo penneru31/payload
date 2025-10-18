@@ -1,7 +1,7 @@
 name = "my-payload-cloudflare-app"
 main = ".open-next/worker.js"
 Using compatibility_date = 2025-10-16
-
+remote = false
 account_id = "194cc13915adf052024b673f23059f1d"
 [[d1_databases]]
 binding = "my_payload_db"  # The variable your Worker will use
